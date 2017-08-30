@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>纯css鼠标hover动效</title>
+    <link rel="stylesheet" href="./css/hover_animation.css">
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    img{
+    	outline: none;
+    	border: none; 
+    }
+    
+    .demo-box {
+        margin: 30px auto;
+        position: relative;
+        width: 20%;
+    }
+    
+    .demo-box .demo-box-img {
+        width: 100%;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="demo-box">
+        <img class="demo-box-img" src="./images/pic.jpg" alt="">
+        <a href="javascript:;" class="hover-mask" style="background-image: url(./images/blackbg.png);">
+            <img src="./images/index_display_cross.png" class="hover-mask-content" alt="">
+            <span class="line-top"></span>
+            <span class="line-bottom"></span>
+            <span class="line-left"></span>
+            <span class="line-right"></span>
+        </a>
+    </div>
+</body>
+
+</html>

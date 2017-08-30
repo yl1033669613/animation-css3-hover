@@ -1,0 +1,222 @@
+/*hover element style*/
+
+.hover-mask {
+    display: block;
+    position: absolute;
+    top: 4%;
+    left: 4%;
+    width: 92%;
+    height: 92%;
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    background-size: 100% 40%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.hover-mask .hover-mask-content {
+    position: absolute;
+    top: 37%;
+    left: 37%;
+    width: 26%;
+    height: 26%;
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    transform: scale(2);
+    -webkit-transform: scale(2);
+}
+
+
+/*css3 @keyframes 定义线框动作*/
+
+@keyframes topBottAnimationHover {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@-webkit-keyframes topBottAnimationHover {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes leftRightAnimationHover {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100%;
+    }
+}
+
+@-webkit-keyframes leftRightAnimationHover {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100%;
+    }
+}
+
+@keyframes topBottAnimation {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@-webkit-keyframes topBottAnimation {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes leftRightAnimation {
+    0% {
+        height: 100%;
+    }
+    100% {
+        height: 0;
+    }
+}
+
+@-webkit-keyframes leftRightAnimation {
+    0% {
+        height: 100%;
+    }
+    100% {
+        height: 0;
+    }
+}
+
+
+/*定义hover动作*/
+
+.hover-mask:hover {
+    background-size: 100% 100%;
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+}
+
+.hover-mask:hover .hover-mask-content {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+}
+
+.hover-mask:hover .line-top,
+.hover-mask:hover .line-bottom {
+    animation: topBottAnimationHover .5s ease both;
+    -webkit-animation: topBottAnimationHover .5s ease both;
+}
+
+.hover-mask:hover .line-left,
+.hover-mask:hover .line-right {
+    animation: leftRightAnimationHover .5s ease both;
+    -webkit-animation: leftRightAnimationHover .5s ease both;
+}
+
+.line-top,
+.line-bottom {
+    animation: topBottAnimation .5s ease both;
+    -webkit-animation: topBottAnimation .5s ease both;
+}
+
+.line-left,
+.line-right {
+    animation: leftRightAnimation .5s ease both;
+    -webkit-animation: leftRightAnimation .5s ease both;
+}
+
+
+/*line style*/
+
+.line-top,
+.line-bottom,
+.line-left,
+.line-right {
+    display: block;
+    background-color: #333;
+    position: absolute;
+    border-radius: 2px;
+}
+
+.line-top,
+.line-bottom {
+    width: 0;
+    height: 4px;
+}
+
+.line-left,
+.line-right {
+    width: 4px;
+    height: 0;
+}
+
+
+/*线框由端点开始变化 参见 type2.gif */
+
+.line-top {
+    left: 0;
+    top: 0;
+}
+
+.line-bottom {
+    right: 0;
+    bottom: 0;
+}
+
+.line-left {
+    left: 0;
+    bottom: 0;
+}
+
+.line-right {
+    right: 0;
+    top: 0;
+}
+
+
+/*线框由边中点开始变化 参见 type1.gif*/
+
+.line-top.from-center {
+    left: 0;
+    top: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.line-bottom.from-center {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+.line-left.from-center {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+
+.line-right.from-center {
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto 0;
+}
