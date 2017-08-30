@@ -19,3 +19,8 @@
     <span class="line-right"></span>
 </a>
 ```
+## 效果图
+> 1. 线框由端点开始变化 <br>
+![效果图](https://github.com/yl1033669613/animation-css3-hover/raw/master/type1.gif)  
+> 2. 线框由边中点开始变化 <br>
+![效果图](https://github.com/yl1033669613/animation-css3-hover/raw/master/type2.gif)  
